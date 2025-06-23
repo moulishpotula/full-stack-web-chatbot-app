@@ -27,3 +27,16 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// next.config.ts
+import path from "path";
+
+const nextConfig = {
+  webpack: (config) => {
+    config.resolve.alias["@"] = path.resolve(__dirname, ".");
+    return config;
+  },
+};
+
+export default nextConfig;
+
